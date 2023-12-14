@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JS DOM - Zadatak 5</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var lista = ["SA", "PD", "BL", "TZ", "MO", "ZE", "DO", "LI", "BU", "TG"];
+        var prviDio
+        var skracenice
+        var zadnjiDio
+
+        function valjanostTablice() {
+
+            flag = true;
+            tablica = document.getElementById("tablica").value;
+            prviDio = tablica.slice(0, 3);
+            zadnjiDio = tablica.slice(-3);
+            skracenice = tablica.slice(3, -3);
+
+            if ((prviDio.length > 3) || (zadnjiDio.length > 3) || (!lista.includes(skracenice))) {
+                flag = false
+            }
+
+            if (flag === true) {
+                alert("Tablica je valjana")
+
+            } else {
+                alert("Tablica nije valjana")
+            }
+        }
+    </script>
+
+    <p>Upisite registarsku tablicu</p>
+    <input type="text" id="tablica" placeholder="Unos...">
+    <button type="button" value="Submit" onclick="valjanostTablice()">Accept</button>
+</body>
+
+</html>

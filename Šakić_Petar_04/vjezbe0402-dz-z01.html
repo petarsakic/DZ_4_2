@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>JS DOM - Zadatak 1</title>
+    <script>
+        function izracunajSredine() {
+            const uneseniBrojevi = prompt("Unesite skup prirodnih brojeva odvojenih zarezima (npr. 1, 4, 16):");
+            const brojevi = uneseniBrojevi.split(',').map(broj => parseInt(broj.trim(), 10));
+            const aritmetickaSredina = brojevi.reduce((zbroj, broj) => zbroj + broj, 0) / brojevi.length;
+            const geometrijskaSredina = Math.pow(brojevi.reduce((umnozak, broj) => umnozak * broj, 1), 1 / brojevi.length);
+
+            document.getElementById('rezultat').innerHTML = `
+                <p>Uneseni brojevi: ${brojevi.join(', ')}</p>
+                <p>Aritmetička sredina: ${aritmetickaSredina.toFixed(2)}</p>
+                <p>Geometrijska sredina: ${geometrijskaSredina.toFixed(2)}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Izračun sredina</h1>
+    
+    <button onclick="izracunajSredine()">Izračunaj</button>
+
+    <div id="rezultat"></div>
+
+</body>
+</html>

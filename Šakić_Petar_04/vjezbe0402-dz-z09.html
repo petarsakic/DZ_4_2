@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JS DOM - Zadatak 9</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+
+        function upaliUgasi() {
+            let prekidac = document.getElementById("prekidac");
+            let zarulja = document.getElementById("zarulja")
+
+            if (prekidac.src.endsWith("off-removebg-preview.png")) {
+                zarulja.src = "zarulja_on_2.png"
+                prekidac.src = "on-removebg-preview.png"
+            } else {
+                zarulja.src = "zarulja_off_2.png"
+                prekidac.src = "off-removebg-preview.png"
+            }
+        }
+
+    </script>
+
+
+    <img id="prekidac" src="off-removebg-preview.png" onclick="upaliUgasi()">
+    <img id="zarulja" src="zarulja_off_2.png">
+</body>
+
+</html>

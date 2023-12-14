@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JS DOM - Zadatak 3</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+ 
+function ocjenaAlert(){
+   var ocjena = document.getElementById("ocjena").value;
+
+        switch(parseInt(ocjena)){
+
+            case 1:
+                alert("1 - Nedovoljan");
+                break;
+            case 2:
+                alert("2 - Dovoljan");
+                break;
+            case 3:
+                alert("3 - Dobar");
+                break;
+            case 4:
+                alert("4 - Vrlo dobar");
+                break;
+            case 5:
+                alert("5 - Odlican");
+                break;
+            default:
+                alert("Pogresan unos!")
+        }
+
+}
+    </script>
+
+<input type="text" id="ocjena" placeholder="Unesite ocjenu">
+<button type="button" value="Submit" onclick="ocjenaAlert()">Accept</button>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS DOM - Zadatak 4</title>
+</head>
+<body>
+    <form>
+		<label for="ocjena">Ocjena (od 1 do 5):</label>
+		<input type="number" id="ocjena" name="ocjena" min="1" max="5">
+        <button type="button" onclick="ispisiOcjenu()">Ispiši ocjenu</button>
+		<p>Ocjena u tekstualnom obliku: <span id="ocjenaTekst"></span></p>
+	</form>
+<script>
+function ispisiOcjenu() {
+	var ocjena = document.getElementById("ocjena").value;
+		var ocjenaTekst = "";
+		switch (ocjena) {
+			case "1":
+				ocjenaTekst = "nedovoljan";
+				break;
+			case "2":
+				ocjenaTekst = "dovoljan";
+				break;
+			case "3":
+				ocjenaTekst = "dobar";
+				break;
+			case "4":
+				ocjenaTekst = "vrlo dobar";
+				break;
+			case "5":
+				ocjenaTekst = "odličan";
+				break;
+            default:
+				ocjenaTekst = "Unesite ocjenu u rasponu od 1 do 5.";
+			}
+            document.getElementById("ocjenaTekst").innerHTML = ocjenaTekst;
+		}
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JS DOM - Zadatak 7</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function starost() {
+            let danRodendana = parseInt(document.getElementById("dan").value);
+            let mjesecRodendana = parseInt(document.getElementById("mjesec").value);
+            let godinaRodendana = parseInt(document.getElementById("godina").value);
+            
+
+            let trenutniDan = new Date();
+            let trenutnaGodina = trenutniDan.getFullYear();
+            let trenutniMjesec = trenutniDan.getMonth() + 1; 
+
+         
+            let godine = trenutnaGodina - godinaRodendana;
+
+            if (mjesecRodendana > trenutniMjesec || (mjesecRodendana === trenutniMjesec && danRodendana > trenutniDan.getDate())) {
+                godine--;
+            }
+
+            alert("Vas broj godina je: " + godine);
+        }
+    </script>
+
+    <p>Unesite dan (1-31)</p>
+    <input id="dan" type="text" placeholder="Dan">
+    <br>
+
+    <p>Unesite mjesec (1-12)</p>
+    <input id="mjesec" type="text" placeholder="Mjesec">
+    <br>
+
+    <p>Unesite godinu (npr. 1970)</p>
+    <input id="godina" type="text" placeholder="Godina">
+    <br>
+    <button onclick="starost()">Izračunaj</button>
+</body>
+
+</html>

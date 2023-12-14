@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JS DOM - Zadatak 8</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        let x, y, z
+
+        function zbrajanje() {
+            x = parseInt(document.getElementById("operand1").value)
+            y = parseInt(document.getElementById("operand2").value)
+            z = x + y
+            alert("Rezultat je:  " + z)
+
+        }
+
+        function oduzimanje() {
+            x = parseInt(document.getElementById("operand1").value)
+            y = parseInt(document.getElementById("operand2").value)
+            z = x - y
+            alert("Rezultat je:  " + z)
+
+        }
+
+        function mnozenje() {
+            x = parseInt(document.getElementById("operand1").value)
+            y = parseInt(document.getElementById("operand2").value)
+            z = x * y
+            alert("Rezultat je:  " + z)
+
+        }
+
+        function dijeljenje() {
+            x = parseInt(document.getElementById("operand1").value)
+            y = parseInt(document.getElementById("operand2").value)
+            z = x / y
+            alert("Rezultat je:  " + z)
+
+        }
+
+        function sinus() {
+            x = parseInt(document.getElementById("operand1").value)
+            z = Math.sin(x)
+            alert("Sinus od x je: " + z)
+
+        }
+
+        function cosinus() {
+            x = parseInt(document.getElementById("operand1").value)
+            z = Math.cos(x)
+            alert("Kosinus od x je:  " + z)
+
+        }
+
+        function tangens() {
+            x = parseInt(document.getElementById("operand1").value)
+            z = Math.tan(x)
+            alert("Tangens od x je:  " + z)
+
+        }
+
+        function ln() {
+            x = parseInt(document.getElementById("operand1").value)
+            z = Math.log(x) / Math.log(2)
+            alert("Ln od x je:  " + z)
+
+        }
+
+        function logaritam() {
+            x = parseInt(document.getElementById("operand1").value)
+            z = Math.log(x)
+            alert("Logaritam od x je:  " + z)
+
+        }
+
+        function naDrugu() {
+            x = parseInt(document.getElementById("operand1").value)
+            y = parseInt(document.getElementById("operand2").value)
+            z = x * x
+            alert("x kvadirano je:  " + z)
+
+        }
+
+        function naTrecu() {
+            x = parseInt(document.getElementById("operand1").value)
+            y = parseInt(document.getElementById("operand2").value)
+            z = x * x * x
+            alert("x na trecu je:  " + z)
+
+        }
+
+        function naNtu() {
+            x = parseInt(document.getElementById("operand1").value)
+            y = parseInt(document.getElementById("operand2").value)
+            z = 1
+            for (let i = 0; i < y; i++) {
+                z *= x;
+            }
+            alert("x na " + y + "-tu je: " + z)
+
+        }
+
+    </script>
+
+    <p>operand 1</p>
+    <input id="operand1" type="text">
+
+    <p>operand 2</p>
+    <input id="operand2" type="text">
+
+    <br><br>
+    <button id="zbrajanje" onclick="zbrajanje()">+</button>
+    <button id="oduzimanje" onclick="oduzimanje()">-</button>
+    <button id="mnozenje" onclick="mnozenje()">*</button>
+    <button id="dijeljenje" onclick="dijeljenje()">/</button>
+    <br><br>
+    <button id="sinus" onclick="sinus()">sin</button>
+    <button id="cosinus" onclick="cosinus()">cos</button>
+    <button id="tangens" onclick="tangens()">tan</button>
+    <br><br>
+    <button id="ln" onclick="ln()">ln</button>
+    <button id="logaritam" onclick="logaritam()">log</button>
+    <br><br>
+    <button id="naDrugu" onclick="naDrugu()">^2</button>
+    <button id="naTrecu" onclick="naTrecu()">^3</button>
+    <button id="naNtu" onclick="naNtu()">^n</button>
+
+
+</body>
+
+</html>
